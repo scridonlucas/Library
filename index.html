@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="upper">
+      <h1 class="title">Virtual Library</h1>
+      <button class="new-book">New Book</button>
+    </div>
+    <div class="middle"></div>
+
+    <div class="modal">
+      <div class="modal-content">
+        <form id="add-book" action="#" method="post">
+          <h2>Add New Book</h2>
+          <div class="close-button">✖</div>
+          <div class="input">
+            <input
+              type="text"
+              id="form-title"
+              name="form-title"
+              placeholder="Title"
+              required
+            />
+          </div>
+
+          <div class="input">
+            <input
+              type="text"
+              id="form-author"
+              name="form-author"
+              placeholder="Author"
+              required
+            />
+          </div>
+          <div class="input">
+            <input
+              type="text"
+              id="form-pages"
+              name="form-pagges"
+              placeholder="Pages"
+              required
+            />
+          </div>
+          <div class="input">
+            <label for="form-checkbox">Read</label>
+            <input type="checkbox" id="form-checkbox" name="form-checkox" />
+          </div>
+          <button class="add-button" type="submit" form="add-book">Add</button>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

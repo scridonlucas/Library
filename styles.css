@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #6a9fa5;
+}
+
+h1 {
+  color: black;
+  font-size: 3em;
+}
+
+.upper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  background-color: #cbd5e1;
+  border: black solid;
+  border-radius: 5px;
+  color: black;
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+}
+
+button:hover {
+  background-color: #64748b;
+}
+
+.middle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 30px;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  background-color: #fca5a5;
+  height: 300px;
+  width: 200px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: black solid 5px;
+  gap: 20px;
+}
+
+h2,
+p {
+  margin: 0;
+}
+
+.read,
+.remove,
+.add-button {
+  width: 120px;
+  height: 30px;
+}
+
+form {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-direction: column;
+  background-color: white;
+  width: 300px;
+  height: 320px;
+  border-radius: 15px;
+  border: black solid 5px;
+}
+
+input:required {
+  outline: none;
+  border: 1px solid black;
+}
+
+input:invalid:focus {
+  outline: none;
+  border: 2px solid red;
+}
+
+input:valid:focus {
+  outline: none;
+  border: 2px solid green;
+}
+
+input[type='text'] {
+  height: 30px;
+  font-size: 15px;
+  padding: 5px;
+}
+
+label {
+  font-size: 20px;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem 1.5rem;
+  width: 24rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.close-button {
+  position: absolute;
+  cursor: pointer;
+  top: 10px;
+  right: 25px;
+}
